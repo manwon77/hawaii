@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>문자내역확인 | 예약관리 | 해외호텔</title>
+	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+	<link rel="stylesheet" href="/css/contents.css">
+</head>
+
+<body class="sub">
+	<h1 class="guide_h1">테이블 가이드</h1>
+	<section>
+		<h2 class="guide_h2">table1</h2>
+		<div>
+			<div>
+				<div class="tbl_ty1 tbl_ty_option">
+					<table summary="호텔리스트 검색정보를 제공합니다.">
+						<colgroup>
+							<col width="13%">
+							<col width="37%">
+							<col width="13%">
+							<col width="37%">
+						</colgroup>
+						<caption>호텔리스트 검색정보 입력</caption>
+						<tbody>
+						<tr style="display:table-row">
+							<th><label for="nation">국가/지역</label></th>
+							<td colspan="3">
+								<select id="nation" class="select">
+									<option selected="selected">국가선택</option>
+									<option></option>
+								</select>
+								<select class="select">
+									<option selected="selected">지역선택</option>
+									<option></option>
+								</select>
+								<select class="select">
+									<option selected="selected">상세지역선택</option>
+									<option></option>
+								</select>
+							</td>
+						</tr>
+						<tr style="display:table-row">
+							<th><label for="checkIn">체크인/아웃</label></th>
+							<td>
+								<a href="#none"><img src="/images/ico_calendar.png" class="vm" alt="달력"></a>
+								<input type="text" style="width:100px">
+								<select id="checkIn">
+									<option selected="selected">1박</option>
+									<option></option>
+								</select>
+								<a href="#none"><img src="/images/ico_calendar.png" class="vm" alt="달력"></a>
+								<input type="text" style="width:100px">
+								<a href="#none" class="color_orange">[초기화]</a>
+							</td>
+							<th><label for="roomNum">객실수</label></th>
+							<td>
+								<select id="roomNum" style="width:80px">
+									<option selected="selected">1실</option>
+									<option></option>
+								</select>
+							</td>
+						</tr>
+						<tr style="display:table-row">
+							<th><label for="num1">인원수</label></th>
+							<td colspan="3">
+								<label for="num1">성인</label>
+								<select id="num1">
+									<option selected="selected"></option>
+									<option></option>
+								</select>
+								<label for="num2">아동</label>
+								<select id="num2">
+									<option selected="selected"></option>
+									<option></option>
+								</select>
+								<span class="text_color_ty1">※ 아동 : 17세 이하 (만 0세~17세)</span>
+							</td>
+						</tr>
+						<tr style="display:table-row">
+							<th><label for="hotelName">호텔명</label></th>
+							<td colspan="3">
+								<input type="text" id="hotelName">
+								<input type="checkbox" class="check_ty1" id="ch1" />
+								<label for="ch1">실시간호텔만 보기</label>
+							</td>
+						</tr>
+						<tr class="hide_list" style="display:none">
+							<th><label for="ch2">수배처 선택</label></th>
+							<td colspan="3">
+								<input type="checkbox" id="ch2">
+								<label for="ch2">개별예약</label>
+								<input type="checkbox" id="ch3">
+								<label for="ch3">WS호텔예약</label>
+								<input type="checkbox" id="ch4">
+								<label for="ch4">비코호텔예약</label>
+								<input type="checkbox" id="ch5">
+								<label for="ch5">JTB호텔예약</label>
+								<input type="checkbox" id="ch6">
+								<label for="ch6">익스피디아호텔예약</label>
+								<input type="checkbox" id="ch7">
+								<label for="ch7">단체예약</label>
+							</td>
+						</tr>
+						<tr class="hide_list" style="display:none">
+							<th><label for="ch8">식사</label></th>
+							<td>
+								<input type="checkbox" id="ch8">
+								<label for="ch8">조식</label>
+								<input type="checkbox" id="ch9">
+								<label for="ch9">석식</label>
+							</td>
+							<th><label for="b1">흡연</label></th>
+							<td>
+								<span class="radio_form">
+									<input type="radio" id="b1" name="b1"><label for="b1">미선택</label>
+									<input type="radio" id="b2" name="b1"><label for="b2">단체예약</label>
+									<input type="radio" id="b3" name="b1"><label for="b3">단체예약</label>
+								</span>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+					<p class="plus_option"><a href="#none" class="btn_open">추가옵션열기</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<h2 class="guide_h2">table2</h2>
+		<div>
+			<div class="tbl_ty2">
+				<table summary="sms 받는사람,보내는사람, 내용에 대한 정보를 제공합니다.">
+					<colgroup>
+						<col width="40%">
+						<col width="*">
+					</colgroup>
+					<caption>sms전송 내용</caption>
+					<tbody>
+					<tr>
+						<th><label for="sms1">받는사람</label></th>
+						<td><input type="text" id="sms1" value="01012341234"></td>
+					</tr>
+					<tr>
+						<th><label for="sms2">보내는사람</label></th>
+						<td><input type="text" id="sms2" value="01012341234"></td>
+					</tr>
+					<tr>
+						<th><label for="sms3">내용</label></th>
+						<td>
+							<textarea id="sms3" cols="19" rows="5" style="width:100%"></textarea>
+							<span class="color_gray">10bytes ( 70bytes )</span>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section>
+	<section>
+		<h2 class="guide_h2">table3</h2>
+		<div>
+			<div>
+				<div class="tbl_ty3 mt20">
+					<table summary="정보를 제공합니다.">
+						<colgroup>
+							<col width="23%">
+							<col width="27%">
+							<col width="23%">
+							<col width="27%">
+						</colgroup>
+						<caption>guest info</caption>
+						<thead>
+						<tr>
+							<th colspan="4">GUEST INFO1 (2 Persons)</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<th>Check in</th>
+							<td><strong>2016-01-25</strong> / 13:00 이후</td>
+							<th>Check out</th>
+							<td><strong>2016-01-25</strong> / 11:00 까지</td>
+						</tr>
+						<tr>
+							<th>Nights</th>
+							<td><strong>1</strong> Nights</td>
+							<th>Rooms</th>
+							<td><strong>1</strong> Room</td>
+						</tr>
+						<tr>
+							<th>Room type</th>
+							<td colspan="3"></td>
+						</tr>
+						<tr>
+							<th>Meal</th>
+							<td>Breakfast : <strong>O</strong> / Dinner : <strong>X</strong></td>
+							<th>AMOUNTS</th>
+							<td><strong>\111,434</strong> (￥10,622)</td>
+						</tr>
+						<tr>
+							<th>Guest name</th>
+							<td colspan="3">PARK MINJUN(M) / SON YOUNGHAE(F)</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<h2 class="guide_h2">table list ty1</h2>
+		<div>
+			<div>
+				<div class="tbl_list_ty1">
+					<table class="cen">
+						<colgroup>
+							<col width="10%" />
+							<col width="*" />
+							<col width="8%" />
+							<col width="8%" />
+							<col width="10%" />
+							<col width="8%" />
+							<col width="20%" />
+							<col width="10%" />
+						</colgroup>
+						<caption>호텔 예약 관련 내용</caption>
+						<thead>
+						<tr>
+							<th>수배처</th>
+							<th>룸타입</th>
+							<th>투숙인원</th>
+							<th>흡연</th>
+							<th>취소/옵션</th>
+							<th>예약상태</th>
+							<th>가격 (1박기준)</th>
+							<th>예약하기</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>익스피디아</td>
+							<td><strong>Japanese Style Westem<br/>(2 Person) (조식 포함)</strong></td>
+							<td>3인</td>
+							<td>금연</td>
+							<td>
+								<div class="qna">
+									<a href="#none"><img src="/images/ico_qna.png" alt="옵션"></a>
+									<ul>
+										<li class="no_money">환불불가</li>
+										<li>무료 인터넷</li>
+										<li>익스피디아 예약수수료 없음</li>
+									</ul>
+								</div>
+							</td>
+							<td>실시간예약</td>
+							<td>
+								<div class="day_money">
+									<button class="btn_sale">25% 할인</button>
+									<ul>
+										<li class="money">
+											\ 102,123
+										</li>
+										<li>
+											<a href="#none">무료취소</a>
+										</li>
+									</ul>
+								</div>
+							</td>
+							<td>
+								<ul>
+									<li>
+										<button class="btn_white">예약</button>
+									</li>
+									<li>
+										<button class="btn_red mt5">1개 객실 남음</button>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td>익스피디아</td>
+							<td><strong>Japanese Style Westem<br/>(2 Person) (조식 포함)</strong></td>
+							<td>3인</td>
+							<td>금연</td>
+							<td>
+								<div class="qna">
+									<a href="#none"><img src="/images/ico_qna.png" alt="옵션"></a>
+									<ul>
+										<li class="no_money">환불불가</li>
+										<li>무료 인터넷</li>
+										<li>익스피디아 예약수수료 없음</li>
+									</ul>
+								</div>
+							</td>
+							<td>실시간예약</td>
+							<td>
+								<div class="day_money">
+									<button class="btn_sale">25% 할인</button>
+									<ul>
+										<li class="money">
+											\ 102,123
+										</li>
+										<li>
+											<a href="#none">무료취소</a>
+										</li>
+									</ul>
+								</div>
+							</td>
+							<td>
+								<ul>
+									<li>
+										<button class="btn_white">예약</button>
+									</li>
+									<li>
+										<button class="btn_red mt5">1개 객실 남음</button>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td>익스피디아</td>
+							<td><strong>Japanese Style Westem<br/>(2 Person) (조식 포함)</strong></td>
+							<td>3인</td>
+							<td>금연</td>
+							<td>
+								<div class="qna">
+									<a href="#none"><img src="/images/ico_qna.png" alt="옵션"></a>
+									<ul>
+										<li class="no_money">환불불가</li>
+										<li>무료 인터넷</li>
+										<li>익스피디아 예약수수료 없음</li>
+									</ul>
+								</div>
+							</td>
+							<td>실시간예약</td>
+							<td>
+								<div class="day_money">
+									<button class="btn_sale">25% 할인</button>
+									<ul>
+										<li class="money">
+											\ 102,123
+										</li>
+										<li>
+											<a href="#none">무료취소</a>
+										</li>
+									</ul>
+								</div>
+							</td>
+							<td>
+								<ul>
+									<li>
+										<button class="btn_white">예약</button>
+									</li>
+									<li>
+										<button class="btn_red mt5">1개 객실 남음</button>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<h2 class="guide_h2">table list ty2</h2>
+		<div>
+			<div>
+				<div class="tbl_ty1 mt10">
+					<table width="100%" summary="예약히스토리, 고객메모, 직원메모에 대한 정보를 제공합니다.">
+						<colgroup>
+							<col width="13%" />
+							<col width="*" />
+						</colgroup>
+						<caption>예약히스토리 정보</caption>
+						<tbody>
+						<tr>
+							<th>예약히스토리</th>
+							<td>
+								<div class="tbl_list_ty2">
+									<table class="left" width="100%" summary="예약히스토리 정보를 제공합니다.">
+										<colgroup>
+											<col width="10%" />
+											<col width="*" />
+										</colgroup>
+										<caption>히스토리 제공</caption>
+										<tbody>
+										<tr>
+											<th class="fnt12">송신상태</th>
+											<td>
+												<button class="btn_red_ty1">메일전송</button>
+												<button class="btn_red_ty1">FAX전송</button>
+											</td>
+										</tr>
+										<tr>
+											<th class="fnt12">예약내역</th>
+											<td>
+												<ul>
+													<li>[2015-12-21 오후 9:56:09]  [KR03836] 입금완료</li>
+													<li>[2015-12-21 오후 9:56:09]  [KR03836] 예약OK</li>
+													<li>[2015-12-21 오후 9:46:34]  []예약시트 Fax발송(0323211571)</li>
+													<li>[2015-12-21 오후 9:46:31]  [홍길동-2374] 예약접수</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<th class="fnt12">결제내역</th>
+											<td>[2015-12-21 오후 9:46:33] [KCP] 결제금액 : 187,500       상태: 매입   </td>
+										</tr>
+										<tr>
+											<th class="fnt12">전송내역</th>
+											<td>
+												<ul>
+													<li>[팩스]   [2015-12-21 오후 9:46:34] [-extranet] 송신완료</li>
+													<li>[메일]  -</li>
+													<li>[HTTP]  -</li>
+												</ul>
+											</td>
+										</tr>
+										</tbody>
+									</table>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>고객메모</th>
+							<td>
+								<ul class="user_memo">
+									<li><span>[2015-12-21 오후 9:56:09] [부천 폴라리스 호텔-KR03836]</span>
+										고객님께(010-2998-1939)《[여행박사] 체크인 번호 155698 체크인 가능합니다.》문자발송</li>
+									<li><span>[2015-12-21 오후 9:56:09] [부천 폴라리스 호텔-KR03836]</span>
+										고객님께(010-2998-1939)《[여행박사] 예약이 확정되었습니다. 체크인:20151224(2박) 예약번호:KH15122123》문자발송</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th>직원메모</th>
+							<td>
+								<p class="mb10">[2015-12-21 오후 9:46:33] [이름-사번]  OOOO호텔과 동시에 예약 진행</p>
+								<textarea rows="3" cols="50" style="width:85%"></textarea>
+								<button class="btn btn_big_gray_ty1">입력</button>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<h2 class="guide_h2">table list ty3</h2>
+		<div>
+			<div>
+				<div class="tbl_list_ty3">
+					<table class="cen" summary="sms전송 내역에 대한 정보를 제공합니다.">
+						<colgroup>
+							<col width="5%">
+							<col width="12%">
+							<col width="14%">
+							<col width="10%">
+							<col width="*">
+							<col width="8%">
+						</colgroup>
+						<caption>문자전송내역확인</caption>
+						<thead>
+						<tr>
+							<th>no</th>
+							<th>받는사람</th>
+							<th>보내는사람</th>
+							<th>통신사</th>
+							<th class="tal">내용</th>
+							<th>결과</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td class="tac">1</td>
+							<td class="tac">01012345678</td>
+							<td class="tac">07012345678(홍길동)</td>
+							<td class="tac">SKT</td>
+							<td>[여행박사] 01012345645787878978978978</td>
+							<td class="tac">성공</td>
+						</tr>
+						<tr>
+							<td class="tac">2</td>
+							<td class="tac">01012345678</td>
+							<td class="tac">07012345678(홍길동)</td>
+							<td class="tac">SKT</td>
+							<td>[여행박사] 01012345645787878978978978</td>
+							<td class="tac">실패</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section>
+		<h2 class="guide_h2">list box</h2>
+		<ul class="list05" data-rel="hide_list">
+			<li>
+				<div class="list1">
+					<h2>확인사항</h2>
+					<div class="list_cont">
+						<ul>
+							<li>* <em class="fnt_style">체크인은 13:00 이후, 체크아웃은 11:00 까지</em> 이며 자정 이후 체크인 시 담당자 또는 숙소에 연락바랍니다.</li>
+							<li>* 기타 요청사항은 <em class="fnt_style">호텔쪽에 전달하여 요청하였으나 100% 확정사항은 아닙니다.</em></li>
+							<li>* 예약 후 현지에서 어떠한 사유로 인해 투숙하지 않았어도 환불되지 않습니다.</li>
+							<li>* 현지에서 직접 변경으로 인한 수수료/불이익은 여행박사에서 책임지지 않습니다.</li>
+							<li>* 호텔에서 여권의 제시 또는 카피를 요구할 수 있으니 양해바랍니다.</li>
+							<li>* 긴급한 경우 당직 근무자에게 연락 주시면 최대한 현지와 연락을 취하여 도와드리겠으나,취소수수료 면제를 보장해 드리지는 못함을 이해 바랍니다.</li>
+							<li>* <em class="fnt_style">담당자명 : 홍길동 (070-7017-1206)</em></li>
+						</ul>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</section>
+	
+	
+	
+
+	<script src="/js/pu_js/lib/jquery-1.10.2.min.js"></script>
+	<script src="/js/pu_js/lib/jquery.bxslider.min.js"></script>
+	<script src="/js/pu_js/common.js"></script>
+</body>
+</html>
